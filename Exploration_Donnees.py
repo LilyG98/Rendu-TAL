@@ -12,6 +12,9 @@ from spacy.lang.fr.stop_words import STOP_WORDS as fr_stop
 #Pour la màj des StopWords: 
 from spacy.lang.fr.stop_words import STOP_WORDS
 
+#Pour le WordCloud : 
+from wordcloud import WordCloud
+
 #Importation du pretrained model en français
 nlp = spacy.load("fr_core_news_md")
 
@@ -90,7 +93,13 @@ def màj_stopwords(list_add_stopwords,df):
     return df
     
 
-
-        
-        
+def WordCloud(label):
+    words = ''
+    for msg in data[data[TARGET_COLUMN] == label[TEXT_COLUMN]]:
+        msg = msg.lower()
+        words += msg + ' '
+        wordcloud = WordCloud(width=600, height=600).generate(words)
+        plt.imshow(wordcloud)
+        plt.axis('off')
+        plt.show()
         

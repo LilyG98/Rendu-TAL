@@ -25,7 +25,7 @@ np.random.seed(1338)
 
 
 def list_ents_by_label(doc,label):
-    """ Extraire 
+    """ 
     input : 1) une variable doc (type = spacy.tokens.doc.Doc)
             2) le nom du label en format str. Ex : 'LOC'
     
