@@ -1,0 +1,6 @@
+Env virtuel :
+
+
+$ cd Python-virtual_environment
+$ source ~/Python-virtual_environment/env-virtuel/bin/activate
+$ doccano
